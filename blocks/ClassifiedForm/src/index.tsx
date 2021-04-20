@@ -76,8 +76,8 @@ const ClassifiedForm: React.SFC<ClassifiedFormProps> = (props: ClassifiedFormPro
   };
 
   return (
-    <div className={styles.ClassifiedForm}>
-      <Card free className={styles.Card}>
+    <div >
+      <Card free >
         <Card.Header title="工作经历" />
         <Card.Divider />
         <Card.BulletHeader title="分类信息" />
