@@ -11,7 +11,7 @@ import {
   Divider,
   Message,
 } from '@alifd/next';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface DataSource {
   job: {
@@ -48,11 +48,11 @@ const DEFAULT_DATA: DataSource = {
   },
 };
 
-const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
+const ClassifiedForm: React.SFC<ClassifiedFormProps> = (props: ClassifiedFormProps): JSX.Element => {
   const {
     dataSource = DEFAULT_DATA,
-    onSubmit = () => {},
-    onCancel = () => {},
+    onSubmit = () => { },
+    onCancel = () => { },
   } = props;
 
   const jobField = Field.useField({ values: dataSource.job });
@@ -67,8 +67,8 @@ const ClassifiedForm: SFC<ClassifiedFormProps> = (props): JSX.Element => {
       return;
     }
     const values = {
-      basic: jobField.getValues(),
-      member: treatmentField.getValues(),
+      job: jobField.getValues(),
+      treatment: treatmentField.getValues(),
     };
     console.log('values:', values);
     onSubmit(values);
