@@ -11,7 +11,6 @@ import {
   Divider,
   Message,
 } from '@alifd/next';
-import styles from './index.module.css';
 
 export interface DataSource {
   job: {
